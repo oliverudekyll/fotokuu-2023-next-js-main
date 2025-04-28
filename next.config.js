@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  export: true,
   reactStrictMode: true,
   images: {
     domains: ['fotokuu.test', 'fotokuu-23-admin.fotokuu.ee'],
