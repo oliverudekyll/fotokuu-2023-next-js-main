@@ -36,7 +36,7 @@ export async function getStaticProps({
       data,
       siteData,
     },
-    revalidate: 10,
+    revalidate: false,
   }
 }
 

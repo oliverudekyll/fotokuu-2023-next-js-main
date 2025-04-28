@@ -17,7 +17,7 @@ export async function getStaticProps({ locale, preview = null, previewData }) {
       data,
       siteData,
     },
-    revalidate: 10,
+    revalidate: false,
   }
 }
 

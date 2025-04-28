@@ -44,7 +44,7 @@ export async function getStaticProps({
       translation: data?.translations[0]?.slug ?? null,
       preview,
     },
-    revalidate: 10,
+    revalidate: false,
   }
 }
 

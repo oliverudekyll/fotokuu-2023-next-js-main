@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }) {
       upcomingEvents: programme.nodes,
       siteData,
     },
-    revalidate: 10,
+    revalidate: false,
   }
 }
 

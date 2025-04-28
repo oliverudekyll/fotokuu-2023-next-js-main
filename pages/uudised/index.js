@@ -12,7 +12,7 @@ export async function getStaticProps({ locale }) {
       posts: news.nodes,
       siteData,
     },
-    revalidate: 10,
+    revalidate: false,
   }
 }
 
