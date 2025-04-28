@@ -41,11 +41,17 @@ const Programme = ({ upcomingEvents }) => {
   return (
     <>
       <PostList>
-        {filteredPosts.map((event) => {
-          return (
-            <PostItem key={event.id} post={event} postType="slug_programme" />
-          )
-        })}
+        {filteredPosts
+          .sort((a, b) => {
+            const dateA = new Date(a.programmeFields.startingDatetime)
+            const dateB = new Date(b.programmeFields.startingDatetime)
+            return dateA - dateB
+          })
+          .map((event) => {
+            return (
+              <PostItem key={event.id} post={event} postType="slug_programme" />
+            )
+          })}
       </PostList>
     </>
   )

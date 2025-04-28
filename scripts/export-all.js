@@ -87,6 +87,26 @@ const PROGRAMMES_QUERY = `
           locationAddress {
             streetAddress
           }
+          relatedEvents {
+            ... on Programme {
+              id
+              title
+              slug
+              programmeFields {
+                startingDatetime
+                endingDatetime
+                subheading
+                locationName
+              }
+            }
+          }
+          relatedArtists {
+            ... on Artist {
+              id
+              title
+              content
+            }
+          }
         }
       }
     }
@@ -112,11 +132,15 @@ const PAGES_QUERY = `
             sourceUrl
           }
         }
-        partners {
-          partners {
-            partnerUrl
-            partnerLogo {
-              sourceUrl
+        template {
+          ... on Template_Supporters {
+            partners {
+              partners {
+                partnerUrl
+                partnerLogo {
+                  sourceUrl
+                }
+              }
             }
           }
         }
@@ -128,30 +152,6 @@ const PAGES_QUERY = `
 const ARTISTS_QUERY = `
   query GetArtists {
     artists(first: 100) {
-      nodes {
-        id
-        title
-        slug
-        content
-        language {
-          slug
-        }
-        translations {
-          slug
-        }
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-      }
-    }
-  }
-`
-
-const PARTNERS_QUERY = `
-  query GetPartners {
-    partners(first: 100) {
       nodes {
         id
         title
@@ -204,15 +204,13 @@ async function processContent(type, data) {
       const imageName = path.basename(imageUrl)
       const imagePath = path.join('public', 'images', type, imageName)
       await downloadImage(imageUrl, imagePath)
-      processedNode.featuredImage.node.sourceUrl = `/images/${type}/${imageName}`
+      const localPath = `/images/${type}/${imageName}`
+      processedNode.featuredImage.node.sourceUrl = localPath
+      processedNode.featuredImage.node.src = localPath
     }
 
-    // Handle partner logos if this is a partners page
-    if (
-      type === 'pages' &&
-      node.template?.templateName === 'Partners' &&
-      node.template?.partners?.partners
-    ) {
+    // Handle partner logos if this is a supporters template page
+    if (type === 'pages' && node.template?.partners?.partners) {
       const partners = node.template.partners.partners
       for (const partner of partners) {
         if (partner.partnerLogo?.sourceUrl) {
@@ -220,7 +218,9 @@ async function processContent(type, data) {
           const logoName = path.basename(logoUrl)
           const logoPath = path.join('public', 'images', 'partners', logoName)
           await downloadImage(logoUrl, logoPath)
-          partner.partnerLogo.sourceUrl = `/images/partners/${logoName}`
+          const localPath = `/images/partners/${logoName}`
+          partner.partnerLogo.sourceUrl = localPath
+          partner.partnerLogo.src = localPath
         }
       }
     }
@@ -240,6 +240,7 @@ async function exportAllContent() {
       'public/images/programmes',
       'public/images/pages',
       'public/images/partners',
+      'public/images/artists',
     ]
     for (const dir of dirs) {
       if (!fs.existsSync(dir)) {
@@ -248,11 +249,13 @@ async function exportAllContent() {
     }
 
     // Fetch and process all content types
-    const [newsData, programmesData, pagesData] = await Promise.all([
-      fetchGraphQL(NEWS_QUERY),
-      fetchGraphQL(PROGRAMMES_QUERY),
-      fetchGraphQL(PAGES_QUERY),
-    ])
+    const [newsData, programmesData, pagesData, artistsData] =
+      await Promise.all([
+        fetchGraphQL(NEWS_QUERY),
+        fetchGraphQL(PROGRAMMES_QUERY),
+        fetchGraphQL(PAGES_QUERY),
+        fetchGraphQL(ARTISTS_QUERY),
+      ])
 
     const processedNews = await processContent('posts', newsData)
     const processedProgrammes = await processContent(
@@ -260,6 +263,7 @@ async function exportAllContent() {
       programmesData,
     )
     const processedPages = await processContent('pages', pagesData)
+    const processedArtists = await processContent('artists', artistsData)
 
     // Save processed data
     fs.writeFileSync(
@@ -273,6 +277,10 @@ async function exportAllContent() {
     fs.writeFileSync(
       'data/pages.json',
       JSON.stringify({ nodes: processedPages }, null, 2),
+    )
+    fs.writeFileSync(
+      'data/artists.json',
+      JSON.stringify({ nodes: processedArtists }, null, 2),
     )
 
     console.log('All content exported successfully!')

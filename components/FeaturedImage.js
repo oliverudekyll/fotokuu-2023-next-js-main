@@ -21,7 +21,12 @@ const FeaturedImage = ({ image, caption }) => {
       {' '}
       <Figure>
         {image && (
-          <Image src={image.mediaItemUrl} alt={image?.altText} fill={true} />
+          <Image
+            src={image.src || image.sourceUrl}
+            alt={image?.altText}
+            fill={true}
+            quality={75}
+          />
         )}
       </Figure>
       {caption && <Caption dangerouslySetInnerHTML={{ __html: caption }} />}

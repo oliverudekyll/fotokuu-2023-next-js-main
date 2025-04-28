@@ -12,7 +12,7 @@ const RelatedEvents = ({ events }) => {
         {events.map((event) => (
           <li key={event.id}>
             <Event>
-              <Link href={event}>
+              <Link href={`/programm/[slug]`} as={`/programm/${event.slug}`}>
                 <EventDate
                   startingDateTime={event.programmeFields?.startingDatetime}
                   endingDateTime={event.programmeFields?.endingDatetime}

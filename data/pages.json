@@ -13,7 +13,286 @@
           "slug": "partnerid"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {
+        "partners": {
+          "partners": [
+            {
+              "partnerUrl": "https://www.foku.ee/en/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/foku.svg",
+                "src": "/images/partners/foku.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kunstihoone.ee/en/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/KH.svg",
+                "src": "/images/partners/KH.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://poff.ee/en/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/POFF27.svg",
+                "src": "/images/partners/POFF27.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kinosoprus.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/s6prus.svg",
+                "src": "/images/partners/s6prus.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kulka.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Kulka.svg",
+                "src": "/images/partners/Kulka.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/en/culture-sports-department",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Tallinn.svg",
+                "src": "/images/partners/Tallinn.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.eaa.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/EKL.svg",
+                "src": "/images/partners/EKL.svg"
+              }
+            },
+            {
+              "partnerUrl": "http://www.ecadc.ee/en/news/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/ECADC.svg",
+                "src": "/images/partners/ECADC.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://finst.ee/en/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/soome_instituut.svg",
+                "src": "/images/partners/soome_instituut.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.metropol.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/metropol.png",
+                "src": "/images/partners/metropol.png"
+              }
+            },
+            {
+              "partnerUrl": "https://www.visittallinn.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/visit_tallinn.svg",
+                "src": "/images/partners/visit_tallinn.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://pallasart.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/pallas.svg",
+                "src": "/images/partners/pallas.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.artun.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eka.svg",
+                "src": "/images/partners/eka.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.artproof.eu/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/artproof.svg",
+                "src": "/images/partners/artproof.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.dsv.com",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/dsv.svg",
+                "src": "/images/partners/dsv.svg"
+              }
+            },
+            {
+              "partnerUrl": "http://kunstimaja.ee/liit",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Asset-3.svg",
+                "src": "/images/partners/Asset-3.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://poff.ee/en",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/poff.svg",
+                "src": "/images/partners/poff.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tlt.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tlt.svg",
+                "src": "/images/partners/tlt.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.britishcouncil.org/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/british-counsil-01.svg",
+                "src": "/images/partners/british-counsil-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.facebook.com/p/Wale-Vaal-100071620707081/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/wale.png",
+                "src": "/images/partners/wale.png"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/et/tallinna-strateegiakeskus",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tln-strateegia-01.svg",
+                "src": "/images/partners/tln-strateegia-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/et/kultuuri-ja-spordiamet",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tln-kult-sport-01.svg",
+                "src": "/images/partners/tln-kult-sport-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://tartu.ee/et",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartu-01.svg",
+                "src": "/images/partners/tartu-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://tartmus.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartmus.png",
+                "src": "/images/partners/tartmus.png"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/starter-kit.png",
+                "src": "/images/partners/starter-kit.png"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/seri-disain.jpg",
+                "src": "/images/partners/seri-disain.jpg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.raamikoda.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/raamikoda-01.svg",
+                "src": "/images/partners/raamikoda-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://saal.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/saal.svg",
+                "src": "/images/partners/saal.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://pohjalabeer.com/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/pohjala-01.svg",
+                "src": "/images/partners/pohjala-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://nudistdrink.com/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/nudist.jpeg",
+                "src": "/images/partners/nudist.jpeg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.metropol.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/metropol-hotel-01.svg",
+                "src": "/images/partners/metropol-hotel-01.svg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Neoon.png",
+                "src": "/images/partners/Neoon.png"
+              }
+            },
+            {
+              "partnerUrl": "https://kiu.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/kiu-01.svg",
+                "src": "/images/partners/kiu-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://kadarbiku.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/kadarbiku-01.svg",
+                "src": "/images/partners/kadarbiku-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://rahvakultuur.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eesti-rahvakultuuri-keskus-01.svg",
+                "src": "/images/partners/eesti-rahvakultuuri-keskus-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://eamt.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/emta.svg",
+                "src": "/images/partners/emta.svg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eesti-filmi-instituut.svg",
+                "src": "/images/partners/eesti-filmi-instituut.svg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/logo-fotomeister-1.png",
+                "src": "/images/partners/logo-fotomeister-1.png"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartu_kulka-01.svg",
+                "src": "/images/partners/tartu_kulka-01.svg"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "id": "cG9zdDo0MQ==",
@@ -28,7 +307,286 @@
           "slug": "partners"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {
+        "partners": {
+          "partners": [
+            {
+              "partnerUrl": "https://www.foku.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/foku.svg",
+                "src": "/images/partners/foku.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kunstihoone.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/KH.svg",
+                "src": "/images/partners/KH.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://poff.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/POFF27.svg",
+                "src": "/images/partners/POFF27.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kinosoprus.ee/et",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/s6prus.svg",
+                "src": "/images/partners/s6prus.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.kulka.ee/et",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Kulka.svg",
+                "src": "/images/partners/Kulka.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/et/kultuuri-ja-spordiamet",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Tallinn.svg",
+                "src": "/images/partners/Tallinn.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.eaa.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/EKL.svg",
+                "src": "/images/partners/EKL.svg"
+              }
+            },
+            {
+              "partnerUrl": "http://www.ecadc.ee/et/uudised/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/ECADC.svg",
+                "src": "/images/partners/ECADC.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://finst.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/soome_instituut.svg",
+                "src": "/images/partners/soome_instituut.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.metropol.ee",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/metropol.png",
+                "src": "/images/partners/metropol.png"
+              }
+            },
+            {
+              "partnerUrl": "https://www.visittallinn.ee",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/visit_tallinn.svg",
+                "src": "/images/partners/visit_tallinn.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://pallasart.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/pallas.svg",
+                "src": "/images/partners/pallas.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.artun.ee",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eka.svg",
+                "src": "/images/partners/eka.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.artproof.eu/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/artproof.svg",
+                "src": "/images/partners/artproof.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.dsv.com/et-ee",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/dsv.svg",
+                "src": "/images/partners/dsv.svg"
+              }
+            },
+            {
+              "partnerUrl": "http://kunstimaja.ee/liit",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Asset-3.svg",
+                "src": "/images/partners/Asset-3.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://poff.ee",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/poff.svg",
+                "src": "/images/partners/poff.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tlt.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tlt.svg",
+                "src": "/images/partners/tlt.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.britishcouncil.org/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/british-counsil-01.svg",
+                "src": "/images/partners/british-counsil-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://rahvakultuur.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eesti-rahvakultuuri-keskus-01.svg",
+                "src": "/images/partners/eesti-rahvakultuuri-keskus-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://eamt.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/emta.svg",
+                "src": "/images/partners/emta.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://kadarbiku.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/kadarbiku-01.svg",
+                "src": "/images/partners/kadarbiku-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://kiu.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/kiu-01.svg",
+                "src": "/images/partners/kiu-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.metropol.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/metropol-hotel-01.svg",
+                "src": "/images/partners/metropol-hotel-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.neoon.eu/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/Neoon.png",
+                "src": "/images/partners/Neoon.png"
+              }
+            },
+            {
+              "partnerUrl": "https://nudistdrink.com/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/nudist.jpeg",
+                "src": "/images/partners/nudist.jpeg"
+              }
+            },
+            {
+              "partnerUrl": "https://pohjalabeer.com/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/pohjala-01.svg",
+                "src": "/images/partners/pohjala-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.raamikoda.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/raamikoda-01.svg",
+                "src": "/images/partners/raamikoda-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://saal.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/saal.svg",
+                "src": "/images/partners/saal.svg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/seri-disain.jpg",
+                "src": "/images/partners/seri-disain.jpg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/starter-kit.png",
+                "src": "/images/partners/starter-kit.png"
+              }
+            },
+            {
+              "partnerUrl": "https://tartmus.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartmus.png",
+                "src": "/images/partners/tartmus.png"
+              }
+            },
+            {
+              "partnerUrl": "https://tartu.ee/et",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartu-01.svg",
+                "src": "/images/partners/tartu-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/et/kultuuri-ja-spordiamet",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tln-kult-sport-01.svg",
+                "src": "/images/partners/tln-kult-sport-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.tallinn.ee/et/tallinna-strateegiakeskus",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tln-strateegia-01.svg",
+                "src": "/images/partners/tln-strateegia-01.svg"
+              }
+            },
+            {
+              "partnerUrl": "https://www.facebook.com/p/Wale-Vaal-100071620707081/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/wale.png",
+                "src": "/images/partners/wale.png"
+              }
+            },
+            {
+              "partnerUrl": "https://www.filmi.ee/",
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/eesti-filmi-instituut.svg",
+                "src": "/images/partners/eesti-filmi-instituut.svg"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/logo-fotomeister.png",
+                "src": "/images/partners/logo-fotomeister.png"
+              }
+            },
+            {
+              "partnerUrl": null,
+              "partnerLogo": {
+                "sourceUrl": "/images/partners/tartu_kulka-01.svg",
+                "src": "/images/partners/tartu_kulka-01.svg"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "id": "cG9zdDozOQ==",
@@ -43,7 +601,8 @@
           "slug": "kontakt"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDozNw==",
@@ -58,7 +617,8 @@
           "slug": "contact"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDozNQ==",
@@ -75,9 +635,11 @@
       ],
       "featuredImage": {
         "node": {
-          "sourceUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg"
+          "sourceUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg",
+          "src": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg"
         }
-      }
+      },
+      "template": {}
     },
     {
       "id": "cG9zdDozMw==",
@@ -94,9 +656,11 @@
       ],
       "featuredImage": {
         "node": {
-          "sourceUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg"
+          "sourceUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg",
+          "src": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg"
         }
-      }
+      },
+      "template": {}
     },
     {
       "id": "cG9zdDozMQ==",
@@ -111,7 +675,8 @@
           "slug": "kaart"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoyOQ==",
@@ -126,7 +691,8 @@
           "slug": "map"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoyNw==",
@@ -141,7 +707,8 @@
           "slug": "programm"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoyNQ==",
@@ -156,7 +723,8 @@
           "slug": "programme"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoyMw==",
@@ -171,7 +739,8 @@
           "slug": "uudised"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoyMQ==",
@@ -186,7 +755,8 @@
           "slug": "news"
         }
       ],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     },
     {
       "id": "cG9zdDoy",
@@ -197,7 +767,8 @@
         "slug": "et"
       },
       "translations": [],
-      "featuredImage": null
+      "featuredImage": null,
+      "template": {}
     }
   ]
 }

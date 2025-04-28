@@ -13,7 +13,9 @@ const Partners = ({ partners }) => {
               <Link href={partner.partnerUrl}>
                 <Figure>
                   <Image
-                    src={partner.partnerLogo.mediaItemUrl}
+                    src={
+                      partner.partnerLogo.src || partner.partnerLogo.sourceUrl
+                    }
                     alt=""
                     fill={true}
                   />
@@ -22,7 +24,7 @@ const Partners = ({ partners }) => {
             ) : (
               <Figure>
                 <Image
-                  src={partner.partnerLogo.mediaItemUrl}
+                  src={partner.partnerLogo.src || partner.partnerLogo.sourceUrl}
                   alt=""
                   fill={true}
                 />

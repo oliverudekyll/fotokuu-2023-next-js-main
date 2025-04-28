@@ -10,11 +10,11 @@ const PostDate = ({ startingDateTime, endingDateTime, isLarge }) => {
   dayjs.locale(locale)
   dayjs.extend(localizedFormat)
 
-  let startingDate = dayjs(startingDateTime).format('l')
-  let endingDate = dayjs(endingDateTime).format('l')
+  let startingDate = dayjs(startingDateTime).format('DD.MM.YYYY')
+  let endingDate = dayjs(endingDateTime).format('DD.MM.YYYY')
 
   if (dayjs(startingDateTime).isSame(dayjs(endingDateTime), 'day')) {
-    startingDate = dayjs(startingDateTime).format('l')
+    startingDate = dayjs(startingDateTime).format('DD.MM.YYYY')
     const startingTime = dayjs(startingDateTime).format('LT')
 
     return (

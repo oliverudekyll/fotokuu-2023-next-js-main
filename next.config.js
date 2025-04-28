@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    unoptimized: true,
     domains: ['fotokuu.test', 'fotokuu-23-admin.fotokuu.ee'],
   },
   i18n: {
