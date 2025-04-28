@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "cG9zdDo0Mw==",
+      "title": "Partners",
+      "slug": "partners",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDo0MQ==",
+      "title": "Partnerid",
+      "slug": "partnerid",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDozOQ==",
+      "title": "Contact",
+      "slug": "contact",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDozNw==",
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDozNQ==",
+      "title": "About",
+      "slug": "about",
+      "content": "<p><a href=\"https://www.fotokuu.ee/en\">Tallinn Photomonth</a> is an international biennial of contemporary art that looks broadly at developments in art and society in a world intensively mediated by cameras, screens and images. The biennial was initiated by the Estonian Union of Photography Artists (<a href=\"https://www.foku.ee/en\">FOKU</a>) in 2011 with the aim of fostering and supporting cooperation between art institutions, galleries and artists.</p>\n<p>The 8th Tallinn Photomonth will take place from September 5 to October 31, 2025. More information coming soon!</p>\n<p>In 2023, one of the largest contemporary art events in Estonia, Tallinn Photomonth (6.10.–26.11.2023) presented an international group show at Tallinn Art Hall’s Lasnamäe Pavilion, an artists’ film programme in cinema Sõprus, organised in cooperation with the Tallinn Black Nights Film Festival (PÖFF), and a public space installation in two trams and two tram stops in Tallinn. Partners of the biennial&#8217;s satellite programme included Fotografiska Tallinn, galleries of the Estonian Artists’ Association, Juhan Kuus Documentary Photo Centre and Tartu Art House among others. Altogether Tallinn Photomonth 2023 had more than 35,000 visitors.</p>\n",
+      "featuredImage": {
+        "node": {
+          "mediaItemUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg",
+          "altText": "",
+          "caption": null,
+          "mediaDetails": {
+            "width": 2560,
+            "height": 1707
+          }
+        }
+      }
+    },
+    {
+      "id": "cG9zdDozMw==",
+      "title": "Fotokuust",
+      "slug": "fotokuust",
+      "content": "<p><a href=\"https://www.fotokuu.ee/\">Tallinna Fotokuu</a> on 2011. aastal Eesti Fotokunstnike Ühenduse (<a href=\"https://www.foku.ee/\">FOKU</a>) poolt algatatud rahvusvaheline kaasaegse kunsti biennaal, mis juhib ning toetab koostööd näitusepaikade, kuraatorite ja kunstnike vahel. Fotokuu esitleb teoseid mitmetest erinevates visuaalkultuuri valdkondadest, et mõtestada kunsti ja ühiskonna arenguid intensiivselt kaamerate, ekraanide ja kujutiste kaudu vahendatavas maailmas.</p>\n<p>8. Tallinna Fotokuu leiab aset 2025. aastal 5. septembrist 31. oktoobrini. Rohkem infot peatselt!</p>\n<p>2023. aastal toimunud 7. Tallinna Fotokuu (6.10 – 26.11.2023) esitles rahvusvahelist grupinäitust Tallinna Kunstihoone Lasnamäe paviljonis, kunstnikufilmide programmi koostöös Pimedate Ööde Filmifestivaliga (PÖFF) kinos Sõprus ja linnaruumi fotoprojekti kahes Tallinna trammis ja trammipeatuses. Fotokuu vältel hõlmas biennaali satelliitprogramm kokku 10 näitust, mille juures olid biennaali partneriteks Fotografiska Tallinn, Eesti Kunstnike Liidu galeriid, Juhan Kuusi Dokfoto Keskus, Tartu Kunstimaja ja mitmed teised näituseasutused. Kokku külastas 2023. aasta Tallinna Fotokuud ligi 35000 inimest.</p>\n",
+      "featuredImage": {
+        "node": {
+          "mediaItemUrl": "/images/pages/1_Fotokuu-2023-peanaituse-Transs-avamine_photo-Roman-Sten-Tonissoo-scaled.jpg",
+          "altText": "",
+          "caption": null,
+          "mediaDetails": {
+            "width": 2560,
+            "height": 1707
+          }
+        }
+      }
+    },
+    {
+      "id": "cG9zdDozMQ==",
+      "title": "Map",
+      "slug": "map",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoyOQ==",
+      "title": "Kaart",
+      "slug": "kaart",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoyNw==",
+      "title": "Programme",
+      "slug": "programme",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoyNQ==",
+      "title": "Programm",
+      "slug": "programm",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoyMw==",
+      "title": "News",
+      "slug": "news",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoyMQ==",
+      "title": "Uudised",
+      "slug": "uudised",
+      "content": null,
+      "featuredImage": null
+    },
+    {
+      "id": "cG9zdDoy",
+      "title": "Sample Page",
+      "slug": "sample-page",
+      "content": "\n<p>This is an example page. It&#8217;s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\"><p>Hi there! I&#8217;m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin&#8217; caught in the rain.)</p></blockquote>\n\n\n\n<p>&#8230;or something like this:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n\n\n\n<p>As a new WordPress user, you should go to <a href=\"http://fotokuu.test/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n",
+      "featuredImage": null
+    }
+  ]
+}
