@@ -1,65 +1,37 @@
-import { fetchAPI } from './api'
-import { imageData, pageInfo, yoastSeo } from './fragments'
-
 export async function fetchProgrammeList() {
-  const query = `
-  query {
-    programmes(first: 100) {
-      nodes {
-        slug
-        language {
-          slug
-        }
-      }
-    }
+  try {
+    const data = await import('../data/programmes.json')
+    return data.nodes.map((node) => ({
+      slug: node.slug,
+      language: node.language,
+    }))
+  } catch (error) {
+    console.error('Error reading programme list:', error)
+    return []
   }
-  `
-
-  const data = await fetchAPI({ query })
-  return data.programmes?.nodes
 }
 
 export async function fetchUpcomingProgramme({ locale, timeStart }) {
-  const query = `
-  query ($locale: LanguageCodeFilterEnum!, $timeStart: String!) {
-    programmes(first: 99, where: {language: $locale, startingDateTime: $timeStart}) {
-      nodes {
-        id
-        title
-        slug
-        uri
-        featuredImageId
-        featuredImage {
-          node {
-            ${imageData}
-          }
-        }
-        programmeCategories {
-          nodes {
-            slug
-          }
-        }
-        programmeFields {
-          subheading
-          startingDatetime
-          endingDatetime
-          locationName
-          locationAddress {
-            streetAddress
-          }
-        }
-      }
+  try {
+    const data = await import('../data/programmes.json')
+
+    const filteredNodes = data.nodes.filter((node) => {
+      const matchesLocale = node.language?.slug === locale.toLowerCase()
+      const matchesTime = node.programmeFields?.startingDatetime >= timeStart
+      return matchesLocale && matchesTime
+    })
+
+    return {
+      nodes: filteredNodes,
+      pageInfo: {
+        hasNextPage: false,
+        endCursor: null,
+      },
     }
+  } catch (error) {
+    console.error('Error reading upcoming programmes:', error)
+    return { nodes: [], pageInfo: { hasNextPage: false, endCursor: null } }
   }
-  `
-
-  const variables = {
-    locale: locale.toUpperCase(),
-    timeStart,
-  }
-
-  const data = await fetchAPI({ query, variables })
-  return data.programmes
 }
 
 export async function fetchPastProgramme({
@@ -70,112 +42,50 @@ export async function fetchPastProgramme({
   after,
   timeEnd,
 }) {
-  const query = `
-  query ($locale: LanguageCodeFilterEnum!, $first: Int, $last: Int, $after: String, $before: String, $timeEnd: String) {
-    programmes(first: $first, last: $last, before: $before, after: $after, where: {language: $locale, endingDateTime: $timeEnd}) {
-      ${pageInfo}
-      nodes {
-        id
-        title
-        slug
-        uri
-        featuredImageId
-        featuredImage {
-          node {
-            ${imageData}
-          }
-        }
-        programmeCategories {
-          nodes {
-            slug
-          }
-        }
-        programmeFields {
-          subheading
-          startingDatetime
-          endingDatetime
-          locationName
-          locationAddress {
-            streetAddress
-          }
-        }
-      }
+  try {
+    const data = await import('../data/programmes.json')
+
+    const filteredNodes = data.nodes.filter((node) => {
+      const matchesLocale = node.language?.slug === locale.toLowerCase()
+      const matchesTime = node.programmeFields?.endingDatetime <= timeEnd
+      return matchesLocale && matchesTime
+    })
+
+    // Apply pagination
+    const startIndex = after ? parseInt(after) : 0
+    const endIndex = first ? startIndex + first : undefined
+    const paginatedNodes = filteredNodes.slice(startIndex, endIndex)
+
+    return {
+      nodes: paginatedNodes,
+      pageInfo: {
+        hasNextPage: endIndex < filteredNodes.length,
+        hasPreviousPage: startIndex > 0,
+        startCursor: startIndex.toString(),
+        endCursor: endIndex?.toString() || filteredNodes.length.toString(),
+      },
+    }
+  } catch (error) {
+    console.error('Error reading past programmes:', error)
+    return {
+      nodes: [],
+      pageInfo: {
+        hasNextPage: false,
+        hasPreviousPage: false,
+        startCursor: null,
+        endCursor: null,
+      },
     }
   }
-  `
-
-  const variables = {
-    locale: locale.toUpperCase(),
-    first,
-    last,
-    before,
-    after,
-    timeEnd,
-  }
-
-  const data = await fetchAPI({ query, variables })
-  return data.programmes
 }
 
 export async function fetchProgramme({ slug, preview, previewData }) {
-  const query = `
-    query Singleprogramme ($id: ID!, $idType: ProgrammeIdType!, $asPreview: Boolean) {
-      programme(id: $id, idType: $idType, asPreview: $asPreview) {
-        title
-        featuredImageId
-        featuredImage {
-          node {
-            ${imageData}
-          }
-        }
-        programmeFields {
-          subheading
-          startingDatetime
-          endingDatetime
-          locationName
-          locationAddress {
-            streetAddress
-          }
-          relatedArtists {
-            ... on Artist {
-              id
-              title
-              content
-            }
-          }
-          relatedEvents {
-            ... on Programme {
-              id
-              title
-              programmeFields {
-                subheading
-                startingDatetime
-                endingDatetime
-                locationName
-              }
-            }
-          }
-        }
-        content
-        translations {
-          slug
-        }
-        ${!preview ? yoastSeo : ''}
-      }
-    }
-  `
-
-  const variables = {
-    id: preview ? previewData?.post?.databaseId : slug,
-    idType: preview ? 'DATABASE_ID' : 'SLUG',
-    asPreview: preview ? true : false,
+  try {
+    const data = await import('../data/programmes.json')
+    const programme = data.nodes.find((node) => node.slug === slug)
+    return programme || null
+  } catch (error) {
+    console.error('Error reading programme:', error)
+    return null
   }
-
-  const data = await fetchAPI({
-    query,
-    variables,
-    previewData,
-  })
-
-  return data.programme
 }

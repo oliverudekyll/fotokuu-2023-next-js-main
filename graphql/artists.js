@@ -1,68 +1,44 @@
-import { fetchAPI } from './api'
-import { imageData, yoastSeo } from './fragments'
-
 export async function fetchProjectList() {
-  const query = `
-  query {
-    artists(first: 100) {
-      nodes {
-        slug
-      }
-    }
+  try {
+    const data = await import('../data/artists.json')
+    return data.nodes.map((node) => ({
+      slug: node.slug,
+      language: node.language,
+    }))
+  } catch (error) {
+    console.error('Error reading artist list:', error)
+    return []
   }
-  `
-
-  const data = await await fetchAPI({ query })
-  return data.artists?.nodes
 }
 
 export async function fetchProjects({ locale }) {
-  const query = `
-  query ($locale: LanguageCodeFilterEnum!) {
-    artists(first: 99, where: {language: $locale}) {
-      nodes {
-        title
-        slug
-      }
+  try {
+    const data = await import('../data/artists.json')
+
+    const filteredNodes = data.nodes.filter(
+      (node) => node.language?.slug === locale.toLowerCase(),
+    )
+
+    return {
+      nodes: filteredNodes,
+      pageInfo: {
+        hasNextPage: false,
+        endCursor: null,
+      },
     }
+  } catch (error) {
+    console.error('Error reading artists:', error)
+    return { nodes: [], pageInfo: { hasNextPage: false, endCursor: null } }
   }
-  `
-
-  const variables = {
-    locale: locale.toUpperCase(),
-  }
-
-  const data = await await fetchAPI({ query, variables })
-  return data.artists
 }
 
 export async function fetchArtist({ slug, preview, previewData }) {
-  const query = `
-    query SingleArtist ($id: ID!, $idType: ArtistIdType!, $asPreview: Boolean) {
-      artist(id: $id, idType: $idType, asPreview: $asPreview) {
-        title
-        featuredImage {
-          node {
-            ${imageData}
-          }
-        }
-        content
-        ${!preview ? yoastSeo : ''}
-      }
-    }
-  `
-
-  const variables = {
-    id: preview ? previewData?.post?.databaseId : slug,
-    idType: preview ? 'DATABASE_ID' : 'SLUG',
-    asPreview: preview ? true : false,
+  try {
+    const data = await import('../data/artists.json')
+    const artist = data.nodes.find((node) => node.slug === slug)
+    return artist || null
+  } catch (error) {
+    console.error('Error reading artist:', error)
+    return null
   }
-
-  const data = await fetchAPI({
-    query,
-    variables,
-    previewData,
-  })
-
-  return data.artist
 }

@@ -1,62 +1,23 @@
-import { fetchAPI } from './api'
-import { imageData, yoastSeo } from './fragments'
-
 export async function fetchPagesList() {
-  const query = `
-  query {
-    pages(first: 100) {
-      nodes {
-        slug
-      }
-    }
+  try {
+    const data = await import('../data/pages.json')
+    return data.nodes.map((node) => ({
+      slug: node.slug,
+      language: node.language,
+    }))
+  } catch (error) {
+    console.error('Error reading pages list:', error)
+    return []
   }
-  `
-
-  const data = await await fetchAPI({ query })
-  return data.pages?.nodes
 }
 
 export async function fetchPage({ slug, preview, previewData }) {
-  const query = `
-    query SinglePage($id: ID!, $idType: PageIdType!, $asPreview: Boolean) {
-      page(id: $id, idType: $idType, asPreview: $asPreview) {
-        title
-        featuredImageId
-        featuredImage {
-          node {
-            ${imageData}
-          }
-        }
-        content
-        template {
-          ... on Template_Supporters {
-            templateName
-            partners {
-              partners {
-                partnerUrl
-                partnerLogo {
-                  ${imageData}
-                }
-              }
-            }
-          }
-        }
-        ${!preview ? yoastSeo : ''}
-      }
-    }
-  `
-
-  const variables = {
-    id: preview ? previewData?.post?.databaseId : slug,
-    idType: preview ? 'DATABASE_ID' : 'URI',
-    asPreview: preview ? true : false,
+  try {
+    const data = await import('../data/pages.json')
+    const page = data.nodes.find((node) => node.slug === slug)
+    return page || null
+  } catch (error) {
+    console.error('Error reading page:', error)
+    return null
   }
-
-  const data = await fetchAPI({
-    query,
-    variables,
-    previewData,
-  })
-
-  return data.page
 }

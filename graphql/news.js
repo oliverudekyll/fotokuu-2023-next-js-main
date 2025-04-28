@@ -1,28 +1,28 @@
-import fs from 'fs'
-import path from 'path'
-
 export async function fetchNews({ locale, first = 12 }) {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'news.json')
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-    const data = JSON.parse(fileContents)
+    const data = await import('../data/news.json')
 
     // Filter by locale if needed
-    // For now, we'll return all news
-    return data
+    const filteredNodes = data.nodes.filter(
+      (node) => node.language?.slug === locale.toLowerCase(),
+    )
+
+    return {
+      nodes: filteredNodes.slice(0, first),
+      pageInfo: {
+        hasNextPage: filteredNodes.length > first,
+        endCursor: null,
+      },
+    }
   } catch (error) {
     console.error('Error reading news data:', error)
-    return { nodes: [] }
+    return { nodes: [], pageInfo: { hasNextPage: false, endCursor: null } }
   }
 }
 
 export async function fetchPost({ slug }) {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'news.json')
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-    const data = JSON.parse(fileContents)
-
-    // Find the post with matching slug
+    const data = await import('../data/news.json')
     const post = data.nodes.find((node) => node.slug === slug)
     return post || null
   } catch (error) {
@@ -33,9 +33,7 @@ export async function fetchPost({ slug }) {
 
 export async function fetchNewsList() {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'news.json')
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-    const data = JSON.parse(fileContents)
+    const data = await import('../data/news.json')
     return data.nodes
   } catch (error) {
     console.error('Error reading news list:', error)
